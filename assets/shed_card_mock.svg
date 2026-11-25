@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="1000" height="1300" style="background:#ffffff; font-family:'Courier New', monospace, sans-serif;">
+  <rect width="1000" height="1300" fill="#fcfcfc" />
+  <rect x="20" y="20" width="960" height="1260" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" />
+  
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="920" height="90" fill="#f9fafb" stroke="#111827" stroke-width="1.5" />
+    <text x="460" y="28" text-anchor="middle" font-size="18" font-weight="900" fill="#111827" font-family="-apple-system, sans-serif">SRI BALAJI BROILER FARMS — SIDDIPET ZONE</text>
+    <text x="460" y="46" text-anchor="middle" font-size="11" font-weight="bold" fill="#4b5563" font-family="-apple-system, sans-serif">CONTRACT GROWER DIVISION • INTEGRATOR: ABIS EXPORTS (IB GROUP)</text>
+    
+    <line x1="0" y1="58" x2="920" y2="58" stroke="#111827" stroke-width="1" />
+    <text x="15" y="78" font-size="11" font-weight="bold" fill="#111827">FARMER: M. Chandraiah (#408)</text>
+    <text x="280" y="78" font-size="11" font-weight="bold" fill="#111827">SHED: 04 (EC Tunnel)</text>
+    <text x="500" y="78" font-size="11" font-weight="bold" fill="#111827">PLACED: 12,500 DOC</text>
+    <text x="740" y="78" font-size="11" font-weight="bold" fill="#111827">BREED: COBB 500</text>
+  </g>
+
+  <g transform="translate(40, 150)">
+    <rect x="0" y="0" width="920" height="36" fill="#111827" />
+    <text x="30" y="22" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">DAY</text>
+    <line x1="60" y1="0" x2="60" y2="36" stroke="#4b5563" />
+    <text x="110" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">OPENING</text>
+    <line x1="160" y1="0" x2="160" y2="36" stroke="#4b5563" />
+    <text x="210" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">MORTALITY</text>
+    <line x1="260" y1="0" x2="260" y2="36" stroke="#4b5563" />
+    <text x="300" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">CULLS</text>
+    <line x1="340" y1="0" x2="340" y2="36" stroke="#4b5563" />
+    <text x="400" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">CLOSING</text>
+    <line x1="460" y1="0" x2="460" y2="36" stroke="#4b5563" />
+    <text x="580" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">FEED (50kg BAGS): OPN + REC - CON = CLS</text>
+    <line x1="720" y1="0" x2="720" y2="36" stroke="#4b5563" />
+    <text x="770" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">AVG WT</text>
+    <line x1="820" y1="0" x2="820" y2="36" stroke="#4b5563" />
+    <text x="870" y="22" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">WATER (L)</text>
+  </g>
+
+  <g transform="translate(40, 186)">
+    <!-- Day 18 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="920" height="38" fill="#ffffff" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">18</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12340</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">8</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">2</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12330</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">90 + 0 - 42 = 48</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">760g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">3800</text>
+    </g>
+
+    <!-- Day 19 -->
+    <g transform="translate(0, 38)">
+      <rect x="0" y="0" width="920" height="38" fill="#f9fafb" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">19</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12330</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">6</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">1</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12323</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">48 + 120 - 45 = 123</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">840g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">4050</text>
+    </g>
+
+    <!-- Day 20 -->
+    <g transform="translate(0, 76)">
+      <rect x="0" y="0" width="920" height="38" fill="#ffffff" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">20</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12323</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">7</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">2</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12314</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">123 + 0 - 46 = 77</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">915g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">4140</text>
+    </g>
+
+    <!-- Day 21 -->
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="920" height="38" fill="#f9fafb" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">21</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12314</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">9</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">3</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12302</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">77 + 0 - 48 = 29</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">985g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">4320</text>
+    </g>
+
+    <!-- DAY 22: ANOMALY SPIKE ROW -->
+    <g transform="translate(0, 152)">
+      <rect x="0" y="0" width="920" height="50" fill="#fef2f2" stroke="#b91c1c" stroke-width="2" />
+      <text x="30" y="32" text-anchor="middle" font-weight="bold" fill="#b91c1c">22</text>
+      <text x="110" y="32" text-anchor="middle" fill="#1e3a8a">12302</text>
+      
+      <circle cx="210" cy="27" r="18" fill="none" stroke="#b91c1c" stroke-width="2" stroke-dasharray="4,2" />
+      <text x="210" y="33" text-anchor="middle" font-weight="bold" fill="#b91c1c" font-size="16">68</text>
+      
+      <text x="300" y="32" text-anchor="middle" fill="#1e3a8a">6</text>
+      <text x="400" y="32" text-anchor="middle" fill="#1e3a8a">12228</text>
+      
+      <rect x="470" y="10" width="240" height="30" fill="none" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="4,2" />
+      <text x="580" y="30" text-anchor="middle" fill="#b91c1c" font-weight="bold">29 + 75 - 55 = 41 [-8 BAGS]</text>
+      
+      <text x="770" y="32" text-anchor="middle" fill="#1e3a8a">1025g</text>
+      <text x="870" y="32" text-anchor="middle" fill="#b91c1c" font-weight="bold">6800 L</text>
+    </g>
+
+    <g transform="translate(40, 210)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">
+        * REMARK: 13:30 Tunnel Fan #3 belt slipped. Inside shed temp peaked at 36.8°C. 68 suffocated. Physical feed audit found 41 bags vs 49 expected.
+      </text>
+    </g>
+
+    <!-- Day 23 -->
+    <g transform="translate(0, 226)">
+      <rect x="0" y="0" width="920" height="38" fill="#ffffff" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">23</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12228</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">22</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">3</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12203</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">41 + 0 - 50 = 41</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">1090g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">5100</text>
+    </g>
+
+    <!-- Day 24 -->
+    <g transform="translate(0, 264)">
+      <rect x="0" y="0" width="920" height="38" fill="#f9fafb" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">24</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12203</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">11</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">1</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12191</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">41 + 100 - 52 = 89</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">1175g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">4700</text>
+    </g>
+
+    <!-- Day 25 -->
+    <g transform="translate(0, 302)">
+      <rect x="0" y="0" width="920" height="38" fill="#ffffff" stroke="#e5e7eb" />
+      <text x="30" y="24" text-anchor="middle" font-weight="bold">25</text>
+      <text x="110" y="24" text-anchor="middle" fill="#1e3a8a">12191</text>
+      <text x="210" y="24" text-anchor="middle" fill="#1e3a8a">6</text>
+      <text x="300" y="24" text-anchor="middle" fill="#1e3a8a">0</text>
+      <text x="400" y="24" text-anchor="middle" fill="#1e3a8a">12185</text>
+      <text x="580" y="24" text-anchor="middle" fill="#1e3a8a">89 + 0 - 54 = 35</text>
+      <text x="770" y="24" text-anchor="middle" fill="#1e3a8a">1260g</text>
+      <text x="870" y="24" text-anchor="middle" fill="#1e3a8a">4860</text>
+    </g>
+  </g>
+</svg>

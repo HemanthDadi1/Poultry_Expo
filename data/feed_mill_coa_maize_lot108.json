@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "Certificate of Analysis (COA) - Inward Raw Material",
+    "feed_mill": "Prodigy Foods Pvt Ltd / Bentoli Formulation Hub",
+    "plant_location": "Cherlapally Industrial Estate, Hyderabad, Telangana",
+    "testing_laboratory": "Analytical Testing Services (NABL Accredited TC-8492)",
+    "lab_address": "Plot 18/A, IDA Nacharam, Hyderabad 500076",
+    "coa_number": "ATS/HYD/2026/COA-MZ-108",
+    "sample_received_date": "2026-11-24",
+    "testing_completed_date": "2026-11-25",
+    "commodity": "yellow_maize",
+    "commodity_display": "Yellow Maize (Poultry Feed Grade Corn)",
+    "supplier_name": "Sri Lakshmi Agro Traders & Commission Agents",
+    "supplier_location": "Nizamabad Agricultural Market Yard (Mandi)",
+    "lot_number": "MZ-2026-HYD-108",
+    "vehicle_numbers": [
+      "TS-08-UB-4412",
+      "TS-08-UB-4413"
+    ],
+    "consignment_qty_mt": 42.5,
+    "qc_manager": "Dr. S. K. Mukherjee, Chief Nutritionist",
+    "qc_status": "LOCKED_BREACH",
+    "qc_approved": false,
+    "override_reason": ""
+  },
+  "parameters": {
+    "aflatoxin_b1_ppb": 28.4,
+    "moisture_pct": 13.8,
+    "crude_protein_pct": 8.1,
+    "damaged_grain_pct": 2.2,
+    "foreign_matter_pct": 1.4,
+    "free_fatty_acids_pct": 1.6
+  },
+  "standard_specifications": {
+    "aflatoxin_b1_ppb": {
+      "max": 20.0,
+      "unit": "ppb",
+      "critical": true,
+      "method": "AOAC 991.31 (HPLC / Immunoaffinity)"
+    },
+    "moisture_pct": {
+      "max": 12.0,
+      "unit": "%",
+      "critical": true,
+      "method": "IS: 4333 (Part II) 105C Oven"
+    },
+    "crude_protein_pct": {
+      "min": 8.5,
+      "unit": "%",
+      "critical": false,
+      "method": "IS: 7874 (Part I) Kjeldahl (N x 6.25)"
+    },
+    "damaged_grain_pct": {
+      "max": 4.0,
+      "unit": "%",
+      "critical": false,
+      "method": "Visual Sorting IS: 4333 (Part I)"
+    },
+    "foreign_matter_pct": {
+      "max": 1.5,
+      "unit": "%",
+      "critical": false,
+      "method": "IS: 4333 (Part I) Sieve"
+    },
+    "free_fatty_acids_pct": {
+      "max": 2.0,
+      "unit": "%",
+      "critical": false,
+      "method": "Titration as Oleic Acid"
+    }
+  },
+  "commercial_impact": {
+    "risk_summary": "CRITICAL TOXICOSIS HAZARD: High Aflatoxin B1 (28.4 ppb) combined with high moisture (13.8%) creates active fungal proliferation risk in bulk silo. Will cause immunosuppression, poor FCR, and liver lesions in broilers if compounded into pre-starter or starter diets.",
+    "recommended_action": "REJECT ENTIRE CONSIGNMENT (42.5 MT). Do not allow weighbridge discharge. If diverted to commercial layer feed or older birds, mandatory binder dosage of 2.5 kg/MT hydrated sodium calcium aluminosilicate (HSCAS) + organic acid mold inhibitor required with written GM approval."
+  }
+}

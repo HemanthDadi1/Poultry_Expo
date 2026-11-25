@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="1000" height="1300" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  <rect width="1000" height="1300" fill="#ffffff" />
+  <rect x="25" y="25" width="950" height="1250" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" />
+
+  <!-- Controller Header -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="900" height="80" fill="#111827" />
+    <text x="20" y="32" font-size="18" font-weight="900" fill="#ffffff">DHUMAL SMARTVENT EC-800 • HOURLY SENSOR &amp; ALARM AUDIT</text>
+    <text x="20" y="54" font-size="11" fill="#9ca3af">Farm ID: Sri Balaji Shed 04 (Siddipet Zone) • Firmware: v4.2.1 • Date: 2026-11-24 (Day 22)</text>
+  </g>
+
+  <!-- Incident Timeline Graph Header -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="900" height="340" fill="#f9fafb" stroke="#e5e7eb" />
+    <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">Day 22 Hourly Thermal &amp; Static Pressure Curve (Tunnel Ventilation)</text>
+    
+    <!-- Y-Axis labels -->
+    <text x="20" y="70" font-size="10" fill="#b91c1c" font-weight="bold">38°C</text>
+    <line x1="60" y1="65" x2="880" y2="65" stroke="#fecaca" stroke-dasharray="3,3" />
+    
+    <text x="20" y="130" font-size="10" fill="#b45309" font-weight="bold">32°C</text>
+    <line x1="60" y1="125" x2="880" y2="125" stroke="#fde68a" stroke-dasharray="3,3" />
+
+    <text x="20" y="200" font-size="10" fill="#15803d" font-weight="bold">24°C</text>
+    <line x1="60" y1="195" x2="880" y2="195" stroke="#bbf7d0" stroke-width="1.5" />
+    <text x="810" y="190" font-size="9" fill="#15803d" font-weight="bold">TARGET SETPOINT</text>
+
+    <!-- Temperature Curve -->
+    <path d="M 80 195 L 160 190 L 240 180 L 320 160 L 400 130 L 480 80 L 560 68 L 640 120 L 720 170 L 800 190" 
+          fill="none" stroke="#b91c1c" stroke-width="3" />
+
+    <!-- Static Pressure Drop Curve -->
+    <path d="M 80 270 L 160 270 L 240 270 L 320 270 L 400 265 L 480 320 L 560 325 L 640 270 L 720 270 L 800 270" 
+          fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,3" />
+
+    <!-- Static pressure legend -->
+    <text x="60" y="290" font-size="10" fill="#2563eb" font-weight="bold">-- Static Pressure (Normal: 28 Pa)</text>
+    <text x="280" y="290" font-size="10" fill="#b91c1c" font-weight="bold">— Inside Temperature (°C)</text>
+
+    <!-- Time labels on X Axis -->
+    <text x="80" y="240" font-size="10" fill="#6b7280">08:00</text>
+    <text x="240" y="240" font-size="10" fill="#6b7280">10:00</text>
+    <text x="400" y="240" font-size="10" fill="#6b7280">12:00</text>
+    <text x="480" y="240" font-size="10" fill="#b91c1c" font-weight="bold">13:30 (TRIP)</text>
+    <text x="560" y="240" font-size="10" fill="#b91c1c" font-weight="bold">14:00 (36.8°C)</text>
+    <text x="640" y="240" font-size="10" fill="#15803d" font-weight="bold">15:00 (REPAIR)</text>
+    <text x="800" y="240" font-size="10" fill="#6b7280">18:00</text>
+
+    <!-- Alarm callout -->
+    <g transform="translate(440, 75)">
+      <rect x="0" y="0" width="220" height="38" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.5" rx="3" />
+      <text x="110" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">ALARM #04: FAN 3 BELT SLIP</text>
+      <text x="110" y="30" text-anchor="middle" font-size="9" fill="#111827">Static Press collapsed to 11 Pa</text>
+    </g>
+  </g>
+
+  <!-- Correlation Summary Box -->
+  <g transform="translate(50, 520)">
+    <rect x="0" y="0" width="900" height="110" fill="#fef2f2" stroke="#b91c1c" stroke-width="2" />
+    <text x="20" y="30" font-size="14" font-weight="900" fill="#b91c1c">INCIDENT ROOT-CAUSE CORRELATION VERIFIED</text>
+    <text x="20" y="55" font-size="12" fill="#111827">1. Controller confirms Fan #3 belt failure at 13:30 caused shed temperature to spike from 28°C to 36.8°C.</text>
+    <text x="20" y="75" font-size="12" fill="#111827">2. This mechanical event correlates 1:1 with the 68 bird suffocations reported in the manual shed register.</text>
+    <text x="20" y="95" font-size="11" font-weight="bold" fill="#b91c1c">CONCLUSION: Mortality was caused by ventilation mechanical failure, not feed poisoning or pathogen outbreak.</text>
+  </g>
+</svg>

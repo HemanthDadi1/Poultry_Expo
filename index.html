@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Enable native pinch-to-zoom and touch scaling on iPad -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=4.0, user-scalable=yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Poultry Ledger">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/app_icon.svg">
+  <title>Field Inspection Ledger • HITEX 2026</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       TOP APP BAR — Two-row layout: brand + actions / tab strip
+       ══════════════════════════════════════════════════════════════════ -->
+  <header class="top-nav">
+    <!-- Row 1: Brand + Status + Field Ingest -->
+    <div class="nav-row-1">
+      <div class="nav-brand">
+        <span class="app-tag">POULTRY INDIA 2026</span>
+        <div class="nav-title-group">
+          <h1 class="nav-title">Field Inspection Ledger</h1>
+          <span class="nav-subtitle">Siddipet Zone • HITEX Hyderabad Demo</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <span class="engine-indicator">Deterministic Offline Engine</span>
+        <button class="btn-action" onclick="openImportModal()">
+          ⊕ Field Ingest
+        </button>
+      </div>
+    </div>
+
+    <!-- Row 2: Big Tab Selector -->
+    <div class="nav-row-2">
+      <div class="vertical-selector" role="tablist">
+        <button class="vertical-tab-btn active" id="tab-broiler" role="tab" onclick="switchVertical('broiler')">
+          <span class="tab-icon">🐔</span>
+          <span class="tab-text">Broiler Integrator</span>
+          <span class="tab-sub">Shed 04 — Siddipet</span>
+          <span class="tab-badge" id="badge-broiler-alerts">2</span>
+        </button>
+        <button class="vertical-tab-btn" id="tab-feed" role="tab" onclick="switchVertical('feed')">
+          <span class="tab-icon">🌽</span>
+          <span class="tab-text">Feed Mill COA</span>
+          <span class="tab-sub">Lot MH-402</span>
+          <span class="tab-badge" id="badge-feed-alerts">3</span>
+        </button>
+        <button class="vertical-tab-btn" id="tab-oem" role="tab" onclick="switchVertical('oem')">
+          <span class="tab-icon">📡</span>
+          <span class="tab-text">OEM Controller</span>
+          <span class="tab-sub">EC-800 Telemetry</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       MAIN SPLIT WORKSPACE
+       ══════════════════════════════════════════════════════════════════ -->
+  <main class="split-container">
+
+    <!-- LEFT PANE: RAW DOCUMENT VIEWER -->
+    <section class="left-pane" aria-label="Raw Ingestion Document">
+      <div class="pane-header">
+        <div class="pane-title" id="doc-title-text">WhatsApp Shed Register Photo (Shed 04 — Siddipet)</div>
+        <div class="pane-tools">
+          <label class="tool-checkbox">
+            <input type="checkbox" id="chk-grounding" checked onchange="toggleGroundingLayer()">
+            Grounding
+          </label>
+          <div class="zoom-button-group">
+            <button class="zoom-btn" onclick="zoomDoc(-0.2)" title="Zoom Out" aria-label="Zoom Out">−</button>
+            <button class="zoom-btn zoom-pct" onclick="resetZoomDoc()" id="zoom-level-text">100%</button>
+            <button class="zoom-btn" onclick="zoomDoc(0.2)" title="Zoom In" aria-label="Zoom In">+</button>
+            <button class="zoom-btn zoom-fit" onclick="fitDocWidth()">Fit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Touch-friendly scrollable & pinch-zoomable viewport -->
+      <div class="doc-viewport" id="doc-viewport">
+        <div class="doc-wrapper" id="doc-wrapper">
+          <img id="doc-image" src="assets/shed_card_mock.svg" width="1000" height="1300" alt="Raw Document Ingestion">
+          <div id="doc-fallback-msg" style="display:none; padding:28px; text-align:left; font-size:12px; color:#111827; line-height:1.5;">
+            <strong style="color:#B91C1C; display:block; margin-bottom:6px;">Preview Unavailable for This File Format</strong>
+            iPad/browser image viewer cannot render raw PDFs or HEIC files directly in this pane. Convert/screenshot to JPG or PNG to preview, or enter values manually in the right-hand ledger table—all deterministic rules remain active.
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Technical Ingest Footer -->
+      <div class="ingest-footer-bar">
+        <span><strong>Source:</strong> <span id="meta-source">WhatsApp Photo (Siddipet Zone Farm 408)</span></span>
+        <span><strong>Parser:</strong> Gemini Multimodal OCR (Grounded)</span>
+        <span class="tabular-nums"><strong>Latency:</strong> 1.18s (Cached)</span>
+      </div>
+    </section>
+
+    <!-- RESIZE HANDLE -->
+    <div class="pane-divider" id="pane-divider"></div>
+
+    <!-- RIGHT PANE: STRUCTURED LEDGER & DETERMINISTIC VERIFICATION -->
+    <section class="right-pane" aria-label="Structured Ledger Verification">
+      <div class="right-scroll-area" id="right-scroll-area">
+
+        <!-- Status Notification Banner (dismissible) -->
+        <div class="status-banner breach" id="status-banner">
+          <div class="banner-body">
+            <div class="banner-heading" id="banner-title">CRITICAL BREACH: 2 Anomalies Flagged</div>
+            <div class="banner-text" id="banner-desc">
+              Day 22 records an abnormal mortality spike (68 birds, 0.54% vs 0.12% standard) and an unexplained 8-bag feed discrepancy.
+            </div>
+          </div>
+          <div class="banner-actions">
+            <button class="btn-banner-action" onclick="scrollToAnomalyRow()">Jump to Anomaly</button>
+            <button class="btn-banner-dismiss" onclick="dismissBanner()" aria-label="Dismiss">✕</button>
+          </div>
+        </div>
+
+        <!-- Supervisor Confirmation Gate: Enforcing Strict State Separation -->
+        <div class="confirmation-gate" id="supervisor-card">
+          <div class="gate-info">
+            <div class="gate-title">
+              Supervisor Verification Gate
+              <span class="verification-badge unverified" id="gate-state-badge">UNVERIFIED (EDITABLE)</span>
+            </div>
+            <div class="gate-desc" id="gate-desc-text">
+              Technical Officer: K. Sreedhar Rao (Siddipet Hub). Verify extracted fields before locking batch into integrator ERP.
+            </div>
+          </div>
+          <div class="gate-actions">
+            <button class="btn-lock unverified" id="btn-lock" onclick="toggleSupervisorLock()">
+              Confirm &amp; Lock Batch
+            </button>
+          </div>
+        </div>
+
+        <!-- Lock Confirmation Bar (shows after locking) -->
+        <div class="lock-confirmation-bar" id="lock-confirmation-bar" style="display:none;">
+          ✓ BATCH VERIFIED &amp; LOCKED by K. Sreedhar Rao — <span class="tabular-nums" id="lock-timestamp"></span>
+        </div>
+
+        <!-- Deterministic KPI Metric Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-cell" id="kpi-cell-1">
+            <div class="kpi-label" id="kpi-label-1">Current Live Birds</div>
+            <div class="kpi-value tabular-nums" id="kpi-val-1">12,185</div>
+            <div class="kpi-sub tabular-nums" id="kpi-sub-1">Placed: 12,500 (315 dead)</div>
+          </div>
+          <div class="kpi-cell breach" id="kpi-cell-2">
+            <div class="kpi-label" id="kpi-label-2">Cumulative Mortality</div>
+            <div class="kpi-value tabular-nums" id="kpi-val-2">2.52%</div>
+            <div class="kpi-sub" id="kpi-sub-2">Benchmark: &lt; 1.80%</div>
+          </div>
+          <div class="kpi-cell" id="kpi-cell-3">
+            <div class="kpi-label" id="kpi-label-3">Feed Consumed</div>
+            <div class="kpi-value tabular-nums" id="kpi-val-3">775 Bags</div>
+            <div class="kpi-sub tabular-nums" id="kpi-sub-3">38,750 kg (50 kg/bag)</div>
+          </div>
+          <div class="kpi-cell breach" id="kpi-cell-4">
+            <div class="kpi-label" id="kpi-label-4">Calculated FCR (Day 25)</div>
+            <div class="kpi-value tabular-nums" id="kpi-val-4">2.524</div>
+            <div class="kpi-sub tabular-nums" id="kpi-sub-4">Cobb 500 Target: 1.470 (+1.054)</div>
+          </div>
+        </div>
+
+        <!-- Section header -->
+        <div class="section-row">
+          <div class="section-heading" id="table-title">Extracted Ledger Table (Days 18 to 25)</div>
+          <div class="section-caption">Values are editable until locked. Math recalculates in real-time.</div>
+        </div>
+
+        <!-- Interactive Table Container (sticky headers via CSS) -->
+        <div class="table-container" id="table-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <!-- OEM Telemetry Section (shown only in OEM mode) -->
+        <div id="oem-chart-section" style="display: none;">
+          <div class="section-row">
+            <div class="section-heading">EC-800 Shed Controller Telemetry Log (Day 22)</div>
+            <div class="section-caption">Correlates tunnel ventilation static pressure collapse with manual mortality spike.</div>
+          </div>
+          <div id="oem-telemetry-box"></div>
+        </div>
+
+      </div>
+
+      <!-- Minimal Auditor Footer -->
+      <footer class="footer-bar">
+        <span class="footer-axiom">AI reads. People confirm. Rules decide.</span>
+        <span class="footer-note">All formulas strictly deterministic. No generative token predictions for math.</span>
+        <button class="btn-subtle" onclick="openRulesModal()">View rules_engine.py</button>
+      </footer>
+    </section>
+  </main>
+
+  <!-- MODAL: PYTHON DETERMINISTIC RULES ENGINE -->
+  <div class="modal-overlay" id="rules-modal" onclick="handleModalOverlayClick(event, 'rules-modal')">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">Deterministic Python Validation Rules — rules_engine.py</div>
+        <button class="modal-close-btn" onclick="closeRulesModal()">×</button>
+      </div>
+      <div class="modal-content">
+        <div class="code-viewer" id="code-snippet-box">
+          <pre><code># Loading rules_engine.py source...</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: TABLET FIELD INGESTION -->
+  <div class="modal-overlay" id="import-modal" onclick="handleModalOverlayClick(event, 'import-modal')">
+    <div class="modal-dialog" style="max-width: 640px;">
+      <div class="modal-header">
+        <div class="modal-title">Field Ingestion Studio</div>
+        <button class="modal-close-btn" onclick="closeImportModal()">×</button>
+      </div>
+      <div class="modal-content">
+
+        <!-- Two Primary Touch Cards -->
+        <div class="ingest-card-grid">
+          <div class="ingest-action-card" onclick="document.getElementById('camera-input').click()">
+            <div class="ingest-card-icon">📷</div>
+            <div class="ingest-action-label">Camera Capture</div>
+            <div class="ingest-action-desc">Photograph paper shed card or lab COA sheet on booth table</div>
+            <input type="file" id="camera-input" accept="image/*" capture="environment" style="display:none;" onchange="handleTabletFileChosen(event, 'camera')">
+          </div>
+          <div class="ingest-action-card" onclick="document.getElementById('file-input').click()">
+            <div class="ingest-card-icon">📂</div>
+            <div class="ingest-action-label">WhatsApp Image / PDF</div>
+            <div class="ingest-action-desc">Upload .jpg, .png, or .pdf from tablet files or gallery</div>
+            <input type="file" id="file-input" accept="image/*,application/pdf" style="display:none;" onchange="handleTabletFileChosen(event, 'file')">
+          </div>
+        </div>
+
+        <!-- Staged file indicator -->
+        <div class="staged-file-row" id="staged-file-row" style="display:none;">
+          <span class="staged-file-name" id="staged-file-name">No file selected</span>
+          <button class="btn-clear-staged" onclick="clearStagedFile()">✕ Clear</button>
+        </div>
+
+        <!-- Ingest Config (simplified) -->
+        <div class="ingest-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ingest-prospect-name">INTEGRATOR / COMPANY NAME</label>
+              <input type="text" id="ingest-prospect-name" class="form-input" value="ABIS Exports (IB Group)" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ingest-doc-type">DOCUMENT TYPE</label>
+              <select id="ingest-doc-type" class="form-select">
+                <option value="shed_card">Broiler Daily Register Card</option>
+                <option value="coa">Third-Party Lab COA (Maize/Soya)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ingest-flock-size">BATCH / CONSIGNMENT SIZE</label>
+              <input type="number" id="ingest-flock-size" class="form-input tabular-nums" value="12500">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ingest-scenario">DEMO ANOMALY SCENARIO</label>
+              <select id="ingest-scenario" class="form-select">
+                <option value="day22_spike">Day 22 Spike (68 dead, −8 bags missing)</option>
+                <option value="aflatoxin_breach">Aflatoxin B1 Breach (28.4 ppb &gt; 20 ppb)</option>
+                <option value="clean_pass">Compliant Batch (All Rules Pass)</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn-execute-ingest" onclick="executeTabletIngestion()">
+            ⟶ Process Ingest &amp; Evaluate Rules
+          </button>
+        </div>
+
+        <!-- Preset Manifest List -->
+        <div class="preset-section">
+          <div class="preset-title">Pre-Configured Expo Hall Scenarios</div>
+          <div class="preset-list" id="preset-list-container"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: 100% Offline, Zero External CDN -->
+  <script src="rules_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="1000" height="1300" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  <rect width="1000" height="1300" fill="#ffffff" />
+  <rect x="25" y="25" width="950" height="1250" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" />
+
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="900" height="80" fill="#f9fafb" stroke="#111827" stroke-width="1.5" />
+    <text x="20" y="30" font-size="16" font-weight="900" fill="#111827">ANALYTICAL TESTING SERVICES (HYDERABAD) • NABL TC-8492</text>
+    <text x="20" y="50" font-size="11" fill="#4b5563">Chemical &amp; Toxicological Testing Laboratory • ISO/IEC 17025:2017 Accredited</text>
+    <text x="20" y="68" font-size="10" fill="#6b7280">IDA Nacharam, Hyderabad, Telangana • Report ID: ATS/2026/MH-402</text>
+  </g>
+
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="900" height="70" fill="#ffffff" stroke="#e5e7eb" />
+    <text x="20" y="26" font-size="11" font-weight="bold" fill="#111827">CLIENT: PRODIGY FOODS PVT LTD (HYDERABAD FEED PLANT)</text>
+    <text x="20" y="46" font-size="11" fill="#4b5563">Commodity: Yellow Maize (Corn Grain) • Consignment: 42.50 MT (Lot #MH-402)</text>
+    <text x="550" y="26" font-size="11" font-weight="bold" fill="#111827">SUPPLIER: Sri Lakshmi Agro Traders (Nizamabad Mandi)</text>
+    <text x="550" y="46" font-size="11" fill="#4b5563">Sample Date: 24-Nov-2026 • Vehicle: TS-08-UB-4412 / 4413</text>
+  </g>
+
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="900" height="34" fill="#111827" />
+    <text x="20" y="22" fill="#ffffff" font-size="11" font-weight="bold">TEST PARAMETER</text>
+    <text x="320" y="22" fill="#ffffff" font-size="11" font-weight="bold">METHOD</text>
+    <text x="500" y="22" fill="#ffffff" font-size="11" font-weight="bold">SPECIFICATION LIMIT</text>
+    <text x="700" y="22" fill="#ffffff" font-size="11" font-weight="bold">OBSERVED VALUE</text>
+    <text x="830" y="22" fill="#ffffff" font-size="11" font-weight="bold">STATUS</text>
+
+    <!-- Row 1: Aflatoxin B1 Breach -->
+    <g transform="translate(0, 34)">
+      <rect x="0" y="0" width="900" height="46" fill="#fef2f2" stroke="#fecaca" />
+      <text x="20" y="28" font-size="12" font-weight="bold" fill="#b91c1c">Aflatoxin B1 (Mycotoxin)</text>
+      <text x="320" y="28" font-size="11" fill="#4b5563">AOAC 991.31 (HPLC)</text>
+      <text x="500" y="28" font-size="12" font-weight="bold" fill="#111827">Max 20.0 ppb</text>
+      <text x="700" y="28" font-size="14" font-weight="900" fill="#b91c1c">28.4 ppb</text>
+      <rect x="820" y="11" width="65" height="24" fill="#fee2e2" stroke="#b91c1c" rx="2" />
+      <text x="852" y="27" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">BREACH</text>
+    </g>
+
+    <!-- Row 2: Moisture Breach -->
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="900" height="46" fill="#fef2f2" stroke="#fecaca" />
+      <text x="20" y="28" font-size="12" font-weight="bold" fill="#b91c1c">Moisture Content</text>
+      <text x="320" y="28" font-size="11" fill="#4b5563">IS: 4333 (Part II)</text>
+      <text x="500" y="28" font-size="12" font-weight="bold" fill="#111827">Max 12.0 %</text>
+      <text x="700" y="28" font-size="14" font-weight="900" fill="#b91c1c">13.8 %</text>
+      <rect x="820" y="11" width="65" height="24" fill="#fee2e2" stroke="#b91c1c" rx="2" />
+      <text x="852" y="27" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">BREACH</text>
+    </g>
+
+    <!-- Row 3: Crude Protein Warning -->
+    <g transform="translate(0, 126)">
+      <rect x="0" y="0" width="900" height="42" fill="#fffbeb" stroke="#fde68a" />
+      <text x="20" y="26" font-size="12" font-weight="bold" fill="#b45309">Crude Protein (CP, N x 6.25)</text>
+      <text x="320" y="26" font-size="11" fill="#4b5563">IS: 7874 Kjeldahl</text>
+      <text x="500" y="26" font-size="12" font-weight="bold" fill="#111827">Min 8.5 %</text>
+      <text x="700" y="26" font-size="13" font-weight="bold" fill="#b45309">8.1 %</text>
+      <rect x="820" y="9" width="65" height="24" fill="#fef3c7" stroke="#b45309" rx="2" />
+      <text x="852" y="25" text-anchor="middle" font-size="10" font-weight="bold" fill="#b45309">WARNING</text>
+    </g>
+
+    <!-- Row 4: Damaged Grain Pass -->
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="900" height="40" fill="#ffffff" stroke="#e5e7eb" />
+      <text x="20" y="25" font-size="12" fill="#111827">Damaged / Discolored Grains</text>
+      <text x="320" y="25" font-size="11" fill="#4b5563">IS: 4333 Visual</text>
+      <text x="500" y="25" font-size="12" fill="#111827">Max 4.0 %</text>
+      <text x="700" y="25" font-size="13" font-weight="bold" fill="#15803d">2.2 %</text>
+      <rect x="820" y="8" width="65" height="24" fill="#f0fdf4" stroke="#15803d" rx="2" />
+      <text x="852" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">PASS</text>
+    </g>
+  </g>
+
+  <!-- Big Red Quarantine Box -->
+  <g transform="translate(50, 480)">
+    <rect x="0" y="0" width="900" height="70" fill="#fef2f2" stroke="#b91c1c" stroke-width="2" />
+    <text x="450" y="30" text-anchor="middle" font-size="16" font-weight="900" fill="#b91c1c">CONSIGNMENT DISPOSITION: QUARANTINE / REJECTED</text>
+    <text x="450" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">DO NOT UNLOAD INTO SILOS • REQUIRES FORMAL QC DIRECTOR WRITTEN OVERRIDE</text>
+  </g>
+</svg>

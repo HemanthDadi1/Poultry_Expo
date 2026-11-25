@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-11-24 21:40:07",
+  "presets": [
+    {
+      "id": "broiler_shed_4",
+      "type": "shed_card",
+      "title": "ABIS Exports - Shed #4 (Day 22 Spike & Bag Discrepancy)",
+      "prospect": "ABIS Exports / IB Group",
+      "data_file": "data/broiler_shed_4_cobb500.json",
+      "doc_asset": "assets/shed_card_mock.svg",
+      "is_default": true
+    },
+    {
+      "id": "maize_coa_108",
+      "type": "coa",
+      "title": "Prodigy Foods / Bentoli - Maize Lot #108 (28.4 ppb Aflatoxin)",
+      "prospect": "Prodigy Foods Pvt Ltd",
+      "data_file": "data/feed_mill_coa_maize_lot108.json",
+      "doc_asset": "assets/feed_mill_coa_mock.svg",
+      "is_default": true
+    },
+    {
+      "id": "oem_controller_22",
+      "type": "oem_controller",
+      "title": "Dhumal / Agrologic - Day 22 Climate & Telemetry Log",
+      "prospect": "Dhumal Industries / Agrologic",
+      "data_file": "data/oem_controller_hourly_day22.json",
+      "doc_asset": "assets/shed_card_mock.svg",
+      "is_default": false
+    },
+    {
+      "id": "shed_card_suguna_broilers_20261124_214007",
+      "type": "shed_card",
+      "title": "Suguna Broilers - Shed #01 (6500 Birds)",
+      "prospect": "Suguna Broilers",
+      "data_file": "data/shed_card_suguna_broilers_20261124_214007.json",
+      "doc_asset": "assets/shed_card_mock.svg",
+      "is_default": false
+    }
+  ]
+}
